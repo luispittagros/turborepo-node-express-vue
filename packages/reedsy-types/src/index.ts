@@ -1,4 +1,4 @@
-interface Job {
+export interface Job {
   id: string;
   bookId: string;
   type: string;
@@ -9,12 +9,12 @@ interface Job {
 
 type JobState = "pending" | "finished" | "error";
 
-interface BookExportRequest {
+export interface BookExportRequest {
   bookId: string;
   type: "epub" | "pdf";
 }
 
-interface BookImportRequest {
+export interface BookImportRequest {
   bookId: string;
   type: "word" | "pdf" | "wattpad" | "evernote";
   url: string;
