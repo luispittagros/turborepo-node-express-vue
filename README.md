@@ -1,6 +1,6 @@
 # Reedsy Challenge Node
 
-## About You
+## About Me
 
 With over 8 years of hands-on experience, I've worked as a Senior Full Stack Developer, specializing in TypeScript, Vue,
 React and Node.
