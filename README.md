@@ -54,7 +54,7 @@ This is a monorepo and includes the following packages/apps:
 
 - `backend`: a node app that exposes a REST API
 - `frontend`: a Vue 3 books SPA that consumes the REST API exposed by the `backend`
-- `types`: a package that contains shared types
+- `reedsy-types`: a package that contains shared types
 - `eslint-config-reedsy`: `eslint` configurations used throughout the monorepo
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 - `turborepo`: monorepo management
@@ -63,7 +63,7 @@ Each package/app is 100% Typescript
 
 ### Tools
 
-- `yarn`: package manager
+- `yarn`: package manager (version 1.22)
 - `turborepo`: monorepo management
 - `eslint`: linting
 - `prettier`: code formatting
@@ -81,20 +81,20 @@ To install all dependencies, run the following command:
 yarn install
 ```
 
-### 2.2 Build
-
-To build all apps and packages, run the following command:
-
-```
-yarn build
-```
-
 ### 2.3 Develop
 
 To develop all apps and packages, run the following command:
 
 ```
 yarn dev
+```
+
+### 2.2 Build
+
+To build all apps and packages, run the following command:
+
+```
+yarn build
 ```
 
 ### 2.4 Lint
@@ -111,60 +111,4 @@ To test all apps and packages, run the following command:
 
 ```
 yarn test
-```
-
-## 3. Node.js REST API
-
-Inside the `apps/backend` folder
-
-### 3.1. Setup
-
-```bash
-yarn install
-```
-
-### 3.2. Run
-
-```bash
-yarn dev
-```
-
-### 3.3. Test
-
-```bash
-yarn test
-```
-
-### 3.4. Lint
-
-```bash
-yarn lint
-```
-
-## 4. Vue 3 Books SPA
-
-Inside the `apps/frontend` folder
-
-### 4.1. Setup
-
-```bash
-yarn install
-```
-
-### 4.2. Run
-
-```bash
-yarn dev
-```
-
-### 4.3. Test
-
-```bash
-yarn test
-```
-
-### 4.4. Lint
-
-```bash
-yarn lint
 ```
