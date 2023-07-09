@@ -1,1 +1,1 @@
-/// <reference types="vite/client" />
+/// <reference reedsy-types="vite/client" />

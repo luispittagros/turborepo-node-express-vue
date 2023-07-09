@@ -29,14 +29,17 @@
     "@vue/eslint-config-typescript": "^11.0.3",
     "@vue/test-utils": "^2.3.2",
     "@vue/tsconfig": "^0.4.0",
+    "autoprefixer": "^10.4.14",
+    "eslint-config-reedsy": "*",
     "eslint-plugin-vue": "^9.11.0",
     "jsdom": "^22.1.0",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.25",
+    "postcss-scss": "^4.0.6",
     "prettier": "^2.8.8",
     "typescript": "~5.0.4",
     "vite": "^4.3.9",
     "vitest": "^0.32.0",
-    "vue-tsc": "^1.6.5",
-    "eslint-config-reedsy": "*"
+    "vue-tsc": "^1.6.5"
   }
 }
