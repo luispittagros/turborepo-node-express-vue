@@ -46,7 +46,7 @@ user-friendly interface on top of the Git commands.
   might not be ideal. A more domain-specific versioning system could be implemented that understands the structure of a
   novel and can track changes at a more suitable granularity, like the paragraph or even sentence level.
 
-## 1. Monorepo
+## Monorepo
 
 This is a monorepo and includes the following packages/apps:
 
@@ -71,9 +71,9 @@ Each package/app is 100% Typescript
 - `lint-staged`: run linters on staged files
 - `jest`: testing
 
-## 2. Getting started
+## Getting started
 
-### 2.1 Install
+### Install
 
 To install all dependencies, run the following command:
 
@@ -81,7 +81,7 @@ To install all dependencies, run the following command:
 yarn install
 ```
 
-### 2.3 Develop
+### Develop
 
 To develop all apps and packages, run the following command:
 
@@ -89,7 +89,7 @@ To develop all apps and packages, run the following command:
 yarn dev
 ```
 
-### 2.2 Build
+### Build
 
 To build all apps and packages, run the following command:
 
@@ -97,7 +97,7 @@ To build all apps and packages, run the following command:
 yarn build
 ```
 
-### 2.4 Lint
+### Lint
 
 To lint all apps and packages, run the following command:
 
@@ -105,10 +105,27 @@ To lint all apps and packages, run the following command:
 yarn lint
 ```
 
-### 2.5 Test
+### Test
 
 To test all apps and packages, run the following command:
 
 ```
 yarn test
 ```
+
+### Type-check
+
+To type-check all apps and packages, run the following command:
+
+```
+yarn type-check
+```
+
+### Format
+
+To format all apps and packages, run the following command:
+
+```
+yarn format
+```
+
