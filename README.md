@@ -69,7 +69,10 @@ Each package/app is 100% Typescript
 - `prettier`: code formatting
 - `husky`: git hooks
 - `lint-staged`: run linters on staged files
-- `jest`: testing
+- `mocha`: testing
+- `supertest`: HTTP assertions
+- `chai`: assertion library
+- other packages used throughout the monorepo
 
 ## Getting started
 
