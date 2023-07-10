@@ -61,7 +61,7 @@ const handleClick = () => {
     </div>
 
     <transition name="fade" appear>
-      <p data-test="book__description" class="book__description" v-if="expanded">
+      <p data-test="book-description" class="book__description" v-if="expanded">
         {{ book.synopsis }}
       </p>
     </transition>

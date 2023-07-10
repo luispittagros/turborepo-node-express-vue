@@ -6,6 +6,7 @@
     "serve": "turbo run serve",
     "dev": "turbo run dev --parallel",
     "test": "turbo run test",
+    "test:e2e": "turbo run test:e2e",
     "lint": "turbo run lint",
     "type-check": "turbo run type-check",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
