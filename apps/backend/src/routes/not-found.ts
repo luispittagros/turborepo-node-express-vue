@@ -1,7 +1,7 @@
-import { Router } from "express";
+import { Router } from 'express'
 
-const router = Router();
+const router = Router()
 
-router.get("*", (req, res) => res.status(404).json("404 Not Found"));
+router.get('*', (req, res) => res.status(404).json('404 Not Found'))
 
-export default router;
+export default router
