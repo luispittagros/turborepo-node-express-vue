@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
-import Book from './Book.vue'
-import Pagination from './Pagination.vue'
+import { ref, onMounted, computed, defineAsyncComponent } from 'vue'
 import useBooksAPI from '../composables/useBooksAPI.js'
 
 const { fetchBooks, books, totalBooks, perPage } = useBooksAPI()
+
+const Book = defineAsyncComponent(() => import('@/components/Book.vue'))
+const Pagination = defineAsyncComponent(() => import('@/components/Pagination.vue'))
 
 onMounted(fetchBooks)
 

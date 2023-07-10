@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import BookList from '../components/BookList.vue'
+import { defineAsyncComponent } from 'vue'
+
+const BookList = defineAsyncComponent(() => import('@/components/BookList.vue'))
 </script>
 
 <template>
