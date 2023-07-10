@@ -7,8 +7,8 @@ export interface Book {
   rating: string;
   author: string;
   cover: string;
-  upvoted: boolean;
-  upvotes: number;
+  upvoted?: boolean;
+  upvotes?: number;
 }
 
 export type BookType = "word" | "pdf" | "wattpad" | "evernote" | "epub";
