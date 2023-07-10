@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
-    "preview": "vite preview",
+    "serve": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "playwright test",
     "build-only": "vite build",
@@ -30,6 +30,7 @@
     "@vue/test-utils": "^2.3.2",
     "@vue/tsconfig": "^0.4.0",
     "autoprefixer": "^10.4.14",
+    "eslint": "^8.44.0",
     "eslint-config-reedsy": "*",
     "eslint-plugin-vue": "^9.11.0",
     "jsdom": "^22.1.0",
