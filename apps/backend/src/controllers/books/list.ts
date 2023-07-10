@@ -1,5 +1,5 @@
 import { Response, NextFunction } from 'express'
-import { Book } from 'reedsy-types'
+import { Book, BooksResponse } from 'reedsy-types'
 import { ReedsyRequest, RequestBody } from '@/types/request'
 import { readFileSync } from 'fs'
 import { resolve } from 'path'
@@ -22,9 +22,9 @@ export const list = async (
 
     // Workaround
 
-    const books: Book[] = JSON.parse(
-      readFileSync(resolve(__dirname, '../../data/books.json'), 'utf8')
-    ).books
+    const data = JSON.parse(readFileSync(resolve(__dirname, '../../data/books.json'), 'utf8'))
+    const books: Book[] = data.books
+    const totalBooks: number = data.meta.count
 
     const { page = '1', limit = '5' }: { page: string; limit: string } = request.query
 
@@ -42,7 +42,14 @@ export const list = async (
       })
     }
 
-    response.status(200).json(results)
+    const booksResponse: BooksResponse = {
+      books: results,
+      meta: {
+        count: totalBooks
+      }
+    }
+    
+    response.status(200).json(booksResponse)
   } catch (error) {
     next(error)
   }

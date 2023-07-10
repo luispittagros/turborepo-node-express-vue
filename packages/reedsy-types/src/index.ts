@@ -36,3 +36,10 @@ export interface BookImportRequest {
   type: Extract<"word" | "pdf" | "wattpad" | "evernote", BookType>;
   url: string;
 }
+
+export interface BooksResponse {
+  books: Book[];
+  meta: {
+    count: number;
+  };
+}
