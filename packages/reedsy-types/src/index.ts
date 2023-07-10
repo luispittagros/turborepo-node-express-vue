@@ -1,31 +1,38 @@
 export interface Book {
-  id: string;
+  id?: string;
+  type?: BookType;
   title: string;
-  description: string;
-  type: BookType;
-  rating: number;
+  synopsis: string;
+  slug: string;
+  rating: string;
+  author: string;
+  cover: string;
+  upvoted: boolean;
+  upvotes: number;
 }
 
 export type BookType = "word" | "pdf" | "wattpad" | "evernote" | "epub";
 
 export interface Job {
-  id: string;
-  bookId: Book["id"];
-  type: string;
+  bookId: string;
+  bookType: BookType;
+  url?: string;
   state: JobState;
   createdAt: Date;
   updatedAt: Date;
 }
 
-type JobState = "pending" | "finished" | "error";
+export type JobType = "import" | "export";
+
+export type JobState = "pending" | "finished" | "error";
 
 export interface BookExportRequest {
-  bookId: Book["id"];
+  bookId: string;
   type: Extract<"epub" | "pdf", BookType>;
 }
 
 export interface BookImportRequest {
-  bookId: Book["id"];
+  bookId: string;
   type: Extract<"word" | "pdf" | "wattpad" | "evernote", BookType>;
   url: string;
 }
