@@ -100,6 +100,16 @@ To build all apps and packages, run the following command:
 yarn build
 ```
 
+### Serve
+
+To serve all apps and packages, run the following command:
+
+```
+yarn serve
+```
+
+Note: this command will only work after running `yarn build`
+
 ### Lint
 
 To lint all apps and packages, run the following command:
@@ -131,4 +141,27 @@ To format all apps and packages, run the following command:
 ```
 yarn format
 ```
+
+### API Endpoints
+
+#### Import and Export endpoints:
+
+`POST`/import
+
+`GET` /import
+
+`POST` /export
+
+`GET` /export
+
+#### Books endpoints:
+
+`GET` /books
+
+`GET` /books?page=1&limit=10
+
+Parameters (optional):
+
+- `page`: page number
+- `limit`: number of books per page
 
