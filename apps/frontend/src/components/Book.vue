@@ -18,10 +18,6 @@ const emit = defineEmits<BookEmits>()
 
 const bookCover = computed(() => `${import.meta.env.VITE_BACKEND_URL}/img/${props.book.cover}`)
 
-const bookBuyOn = computed(() => {
-  const buyOn = props.book.buyOn
-  return buyOn ? buyOn.map((buyOn) => buyOn.label).join(', ') : 'N/A'
-})
 const handleClick = () => {
   emit('toggle-expanded', props.book.slug)
 }
