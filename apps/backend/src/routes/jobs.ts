@@ -1,20 +1,15 @@
-import { Router } from "express";
+import { Router } from 'express'
 
-import {
-  createImportJob,
-  createExportJob,
-  getImports,
-  getExports,
-} from "@/controllers/jobs";
+import { createImportJob, createExportJob, getImports, getExports } from '@/controllers/jobs'
 
-const router = Router();
+const router = Router()
 
-router.post("/import", createImportJob);
+router.post('/import', createImportJob)
 
-router.post("/export", createExportJob);
+router.post('/export', createExportJob)
 
-router.get("/import", getImports);
+router.get('/import', getImports)
 
-router.get("/export", getExports);
+router.get('/export', getExports)
 
-export default router;
+export default router
