@@ -132,6 +132,8 @@ e2e tests:
 yarn test:e2e
 ```
 
+Note: `npx playwright install` is required to run e2e tests
+
 ### Type-check
 
 To type-check all apps and packages, run the following command:
