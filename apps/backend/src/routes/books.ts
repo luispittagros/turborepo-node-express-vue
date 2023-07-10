@@ -1,9 +1,9 @@
-import { Router } from "express";
+import { Router } from 'express'
 
-import { list } from "@/controllers/books";
+import { list } from '@/controllers/books'
 
-const router = Router();
+const router = Router()
 
-router.get("/", list);
+router.get('/', list)
 
-export default router;
+export default router

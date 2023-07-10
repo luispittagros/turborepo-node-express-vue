@@ -1,7 +1,6 @@
 {
   "include": [
     "env.d.ts",
-    "src/**/*",
     "src/**/*.ts",
     "src/**/*.json"
   ],
@@ -9,32 +8,27 @@
     "node_modules"
   ],
   "compilerOptions": {
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "composite": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "rootDir": "./src",
     "paths": {
       "@/*": [
-        "./*"
+        "./src/*"
       ]
     },
-    "lib": [
-      "esnext"
-    ],
-    "baseUrl": "./src",
     "target": "ESNext",
     "moduleResolution": "nodenext",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
     "importHelpers": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": false,
     "skipLibCheck": true,
-    "allowJs": true,
-    "pretty": true,
-    "rootDir": "./src",
-    "outDir": "./dist",
     "strict": true,
     "noImplicitAny": true,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
     "noUnusedLocals": true,

@@ -1,1 +1,1 @@
-export * from "./list";
+export * from '@/controllers/books/list'

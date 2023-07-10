@@ -1,14 +1,14 @@
-import { Router } from "express";
+import { Router } from 'express'
 
-import books from "./books";
-import jobs from "./jobs";
-import NotFound from "./not-found";
+import books from '@/routes/books'
+import jobs from '@/routes/jobs'
+import NotFound from '@/routes/not-found'
 
-const router = Router();
+const router = Router()
 
-router.use("/jobs", jobs);
-router.use("/books", books);
+router.use('/jobs.ts', jobs)
+router.use('/books', books)
 
-router.use(NotFound);
+router.use(NotFound)
 
-export default router;
+export default router
