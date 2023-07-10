@@ -6,7 +6,7 @@ import NotFound from '@/routes/not-found'
 
 const router = Router()
 
-router.use('/jobs.ts', jobs)
+router.use('/jobs', jobs)
 router.use('/books', books)
 
 router.use(NotFound)

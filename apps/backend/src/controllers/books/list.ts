@@ -1,6 +1,8 @@
 import { Response, NextFunction } from 'express'
 import { Book } from 'reedsy-types'
 import { ReedsyRequest, RequestBody } from '@/types/request'
+import { readFileSync } from 'fs'
+import { resolve } from 'path'
 
 interface Pagination {
   page: string
@@ -13,7 +15,16 @@ export const list = async (
   next: NextFunction
 ) => {
   try {
-    const books: Book[] = await import('@/data/books.json').then((module) => module.default.books)
+    // Not working due to bug/experimental feature in nodejs (assert type: json)
+    /* const books: Book[] = await import('../data/books.json', { assert: { type: 'json' } }).then(
+      (module) => module.default.books
+    )*/
+
+    // Workaround
+
+    const books: Book[] = JSON.parse(
+      readFileSync(resolve(__dirname, '../../data/books.json'), 'utf8')
+    ).books
 
     const { page = '1', limit = '5' }: { page: string; limit: string } = request.query
 
@@ -24,6 +35,13 @@ export const list = async (
     const endIndex = pageNumber * limitNumber
 
     const results = books.slice(startIndex, endIndex)
+
+    if (!results.length) {
+      return response.status(404).json({
+        message: 'No books found'
+      })
+    }
+    
     response.status(200).json(results)
   } catch (error) {
     next(error)

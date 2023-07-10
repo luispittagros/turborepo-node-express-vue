@@ -1,8 +1,7 @@
 {
   "include": [
     "env.d.ts",
-    "src/**/*.ts",
-    "src/**/*.json"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules"
@@ -16,9 +15,9 @@
         "./src/*"
       ]
     },
+    "moduleResolution": "NodeNext",
     "target": "ESNext",
-    "moduleResolution": "nodenext",
-    "module": "ESNext",
+    "module": "CommonJS",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "sourceMap": true,
