@@ -126,6 +126,12 @@ To test all apps and packages, run the following command:
 yarn test
 ```
 
+e2e tests:
+
+```
+yarn test:e2e
+```
+
 ### Type-check
 
 To type-check all apps and packages, run the following command:
