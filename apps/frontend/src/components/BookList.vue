@@ -15,25 +15,80 @@ const toggleExpanded = (slug: string) => {
 }
 
 const isExpanded = computed(() => (slug: string) => expanded.value === slug)
+
+const backgroundColor = computed(
+  () => (index: number) => index % 2 === 0 ? 'var(--isabelline)' : 'var(--white)'
+)
 </script>
 
 <template>
   <div class="book-list">
-    <Book
-      v-for="book in books"
-      :key="book.slug"
-      :book="book"
-      :expanded="isExpanded(book.slug)"
-      @toggle-expanded="toggleExpanded"
-    />
+    <h1>Most Popular Books of All Time</h1>
 
-    <Pagination :total="totalBooks" :perPage="perPage" @page-changed="fetchBooks" />
+    <div class="book-list__headings">
+      <span>Title</span>
+      <span>Published</span>
+      <span>Rating</span>
+      <span>Buy On</span>
+    </div>
+
+    <div class="book-list__books">
+      <Book
+        v-for="(book, index) in books"
+        :key="book.slug"
+        :book="book"
+        :expanded="isExpanded(book.slug)"
+        :backgroundColor="backgroundColor(index)"
+        @toggle-expanded="toggleExpanded"
+      />
+    </div>
+
+    <Pagination
+      :total="totalBooks"
+      :perPage="perPage"
+      @page-changed="fetchBooks"
+      class="book-list__pagination"
+    />
   </div>
 </template>
 
 <style lang="scss">
+// NOTE: Did not implement a complete mobile first responsive design to keep things simple
+
 .book-list {
   display: flex;
-  border-radius: 8px;
+  flex-flow: column;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  padding: var(--padding-sm);
+
+  h1 {
+    margin: 0;
+    padding: var(--padding-xs) var(--padding) 0 var(--padding);
+    font-size: var(--font-size-lg);
+
+    @media (min-width: 1024px) {
+      font-size: var(--font-size-xl);
+    }
+  }
+
+  &__headings {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: var(--padding);
+    border-bottom: 1px solid var(--gray-200);
+    text-transform: uppercase;
+    color: var(--dark-grey);
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+
+    @media (min-width: 1024px) {
+      font-size: var(--font-size);
+    }
+  }
+
+  &__pagination {
+    margin: 0 auto;
+  }
 }
 </style>
