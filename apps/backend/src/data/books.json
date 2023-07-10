@@ -5,10 +5,25 @@
       "cover": "01.jpg",
       "rating": "9.9",
       "slug": "in-search-of-lost-time",
-      "synopsis": "In Search of Lost Time, also translated as Remembrance of Things Past, novel in seven parts by Marcel Proust, published in French as À la recherche du temps perdu from 1913 to 1927. The novel is the story of Proust's own life, told as an allegorical search for truth.\nIn Search of Lost Time, also translated as Remembrance of Things Past, novel in seven parts by Marcel Proust, published in French as À la recherche du temps perdu from 1913 to 1927. The novel is the story of Proust's own life, told as an allegorical search for truth.",
+      "synopsis": "In Search of Lost Time, also translated as Remembrance of Things Past, novel in seven parts by Marcel Proust, publishedAt in French as À la recherche du temps perdu from 1913 to 1927. The novel is the story of Proust's own life, told as an allegorical search for truth.\nIn Search of Lost Time, also translated as Remembrance of Things Past, novel in seven parts by Marcel Proust, publishedAt in French as À la recherche du temps perdu from 1913 to 1927. The novel is the story of Proust's own life, told as an allegorical search for truth.",
       "title": "In Search of Lost Time",
+      "publishedAt": "1913",
       "upvoted": false,
-      "upvotes": 1111
+      "upvotes": 1111,
+      "buyOn": [
+        {
+          "label": "Amazon",
+          "url": "https://www.amazon.com/In-Search-Lost-Time-Vol/dp/0812969642"
+        },
+        {
+          "label": "iBooks",
+          "url": "https://books.apple.com/us/book/in-search-of-lost-time/id360911396"
+        },
+        {
+          "label": "Play Store",
+          "url": "https://play.google.com/store/books/details/Marcel_Proust_In_Search_of_Lost_Time?id=5Z5bAAAAMAAJ"
+        }
+      ]
     },
     {
       "author": "Miguel de Cervantes",
@@ -17,8 +32,23 @@
       "slug": "don-quixote",
       "synopsis": "Don Quixote is a middle-aged gentleman from the region of La Mancha in central Spain. Obsessed with the chivalrous ideals touted in books he has read, he decides to take up his lance and sword to defend the helpless and destroy the wicked.\nDon Quixote is a middle-aged gentleman from the region of La Mancha in central Spain. Obsessed with the chivalrous ideals touted in books he has read, he decides to take up his lance and sword to defend the helpless and destroy the wicked.",
       "title": "Don Quixote",
+      "publishedAt": "1605",
       "upvoted": true,
-      "upvotes": 1022
+      "upvotes": 1022,
+      "buyOn": [
+        {
+          "label": "Amazon",
+          "url": "https://www.amazon.com/Don-Quixote-Miguel-Cervantes/dp/0060934344"
+        },
+        {
+          "label": "iBooks",
+          "url": "https://books.apple.com/us/book/ulysses/id498837310"
+        },
+        {
+          "label": "Play Store",
+          "url": "https://play.google.com/store/books/details/James_Joyce_Ulysses?id=5Z5bAAAAMAAJ"
+        }
+      ]
     },
     {
       "author": "James Joyce",
@@ -27,8 +57,23 @@
       "slug": "ulysses",
       "synopsis": "All the action of Ulysses takes place in and immediately around Dublin on a single day (June 16, 1904). The three central characters—Stephen Dedalus (the hero of Joyce’s earlier Portrait of the Artist as a Young Man); Leopold Bloom, a Jewish advertising canvasser; and his wife, Molly—are intended to be modern counterparts of Telemachus, Ulysses (Odysseus), and Penelope, respectively, and the events of the novel loosely parallel the major events in Odysseus’s journey home after the Trojan War.\nAll the action of Ulysses takes place in and immediately around Dublin on a single day (June 16, 1904). The three central characters—Stephen Dedalus (the hero of Joyce’s earlier Portrait of the Artist as a Young Man); Leopold Bloom, a Jewish advertising canvasser; and his wife, Molly—are intended to be modern counterparts of Telemachus, Ulysses (Odysseus), and Penelope, respectively, and the events of the novel loosely parallel the major events in Odysseus’s journey home after the Trojan War.",
       "title": "Ulysses",
+      "publishedAt": "1922",
       "upvoted": false,
-      "upvotes": 1003
+      "upvotes": 1003,
+      "buyOn": [
+        {
+          "label": "Amazon",
+          "url": "https://www.amazon.com/Ulysses-James-Joyce/dp/1840226358"
+        },
+        {
+          "label": "iBooks",
+          "url": "https://books.apple.com/us/book/ulysses/id498837310"
+        },
+        {
+          "label": "Play Store",
+          "url": "https://play.google.com/store/books/details/James_Joyce_Ulysses?id=5Z5bAAAAMAAJ"
+        }
+      ]
     },
     {
       "author": "F. Scott Fitzgerald",
@@ -37,8 +82,15 @@
       "slug": "the-great-gatsby",
       "synopsis": "The Great Gatsby is a story told by Nick Carraway, who was once Gatsby's neighbor, and he tells the story sometime after 1922, when the incidents that fill the book take place. As the story opens, Nick has just moved from the Midwest to West Egg, Long Island, seeking his fortune as a bond salesman.\nThe Great Gatsby is a story told by Nick Carraway, who was once Gatsby's neighbor, and he tells the story sometime after 1922, when the incidents that fill the book take place. As the story opens, Nick has just moved from the Midwest to West Egg, Long Island, seeking his fortune as a bond salesman.",
       "title": "The Great Gatsby",
+      "publishedAt": "1925",
       "upvoted": false,
-      "upvotes": 991
+      "upvotes": 991,
+      "buyOn": [
+        {
+          "label": "Amazon",
+          "url": "https://www.amazon.com/Great-Gatsby-F-Scott-Fitzgerald/dp/0743273567"
+        }
+      ]
     },
     {
       "author": "Herman Melville",
@@ -47,8 +99,19 @@
       "slug": "moby-dick",
       "synopsis": "The sole survivor of a lost whaling ship relates the tale of his captain's self-destructive obsession to hunt the white whale, Moby Dick. This classic story by Herman Melville revolves around Captain Ahab and his obsession with a huge whale, Moby Dick.\nThe sole survivor of a lost whaling ship relates the tale of his captain's self-destructive obsession to hunt the white whale, Moby Dick. This classic story by Herman Melville revolves around Captain Ahab and his obsession with a huge whale, Moby Dick.",
       "title": "Moby Dick",
+      "publishedAt": "1920",
       "upvoted": true,
-      "upvotes": 940
+      "upvotes": 940,
+      "buyOn": [
+        {
+          "label": "iBooks",
+          "url": "https://books.apple.com/us/book/ulysses/id498837310"
+        },
+        {
+          "label": "Play Store",
+          "url": "https://play.google.com/store/books/details/James_Joyce_Ulysses?id=5Z5bAAAAMAAJ"
+        }
+      ]
     },
     {
       "author": "William Shakespeare",
@@ -57,8 +120,23 @@
       "slug": "hamlet",
       "synopsis": "Hamlet, Prince of Denmark, is home from school to mourn the death of his father, King Hamlet, who has died two months earlier. Hamlet is disgusted by the marriage of his newly widowed mother, Queen Gertrude, to his Uncle, King Hamlet's brother, Claudius, who now has the throne.\nHamlet, Prince of Denmark, is home from school to mourn the death of his father, King Hamlet, who has died two months earlier. Hamlet is disgusted by the marriage of his newly widowed mother, Queen Gertrude, to his Uncle, King Hamlet's brother, Claudius, who now has the throne.",
       "title": "Hamlet",
+      "publishedAt": "1923",
       "upvoted": false,
-      "upvotes": 909
+      "upvotes": 909,
+      "buyOn": [
+        {
+          "label": "Amazon",
+          "url": "https://www.amazon.com/Hamlet-William-Shakespeare/dp/074347712X"
+        },
+        {
+          "label": "iBooks",
+          "url": "https://books.apple.com/us/book/hamlet/id395513609"
+        },
+        {
+          "label": "Play Store",
+          "url": "https://play.google.com/store/books/details/William_Shakespeare_Hamlet?id=1Q0VAAAAYAAJ"
+        }
+      ]
     },
     {
       "author": "Leo Tolstoy",
@@ -67,8 +145,19 @@
       "slug": "war-and-peace",
       "synopsis": "War and Peace broadly focuses on Napoleon’s invasion of Russia in 1812 and follows three of the most well-known characters in literature: Pierre Bezukhov, the illegitimate son of a count who is fighting for his inheritance and yearning for spiritual fulfillment; Prince Andrei Bolkonsky, who leaves his family behind to fight in the war against Napoleon; and Natasha Rostov, the beautiful young daughter of a nobleman who intrigues both men.\nWar and Peace broadly focuses on Napoleon’s invasion of Russia in 1812 and follows three of the most well-known characters in literature: Pierre Bezukhov, the illegitimate son of a count who is fighting for his inheritance and yearning for spiritual fulfillment; Prince Andrei Bolkonsky, who leaves his family behind to fight in the war against Napoleon; and Natasha Rostov, the beautiful young daughter of a nobleman who intrigues both men.",
       "title": "War and Peace",
+      "publishedAt": "1869",
       "upvoted": true,
-      "upvotes": 839
+      "upvotes": 839,
+      "buyOn": [
+        {
+          "label": "Amazon",
+          "url": "https://www.amazon.com/War-Peace-Leo-Tolstoy/dp/1427030200"
+        },
+        {
+          "label": "Play Store",
+          "url": "https://play.google.com/store/books/details/Leo_Tolstoy_War_and_Peace?id=1Q0VAAAAYAAJ"
+        }
+      ]
     },
     {
       "author": "Homer",
@@ -77,8 +166,23 @@
       "slug": "the-odyssey",
       "synopsis": "With the consent of Zeus, Athena travels to Ithaca to speak with Telemachus. Assuming the form of Odysseus's old friend Mentes, Athena predicts that Odysseus is still alive and that he will soon return to Ithaca. She advises Telemachus to call together the suitors and announce their banishment from his father's estate.\nWith the consent of Zeus, Athena travels to Ithaca to speak with Telemachus. Assuming the form of Odysseus's old friend Mentes, Athena predicts that Odysseus is still alive and that he will soon return to Ithaca. She advises Telemachus to call together the suitors and announce their banishment from his father's estate.",
       "title": "The Odyssey",
+      "publishedAt": "762",
       "upvoted": false,
-      "upvotes": 802
+      "upvotes": 802,
+      "buyOn": [
+        {
+          "label": "Amazon",
+          "url": "https://www.amazon.com/Odyssey-Homer/dp/0393089053"
+        },
+        {
+          "label": "iBooks",
+          "url": "https://books.apple.com/us/book/the-odyssey/id395513609"
+        },
+        {
+          "label": "Play Store",
+          "url": "https://play.google.com/store/books/details/Homer_The_Odyssey?id=1Q0VAAAAYAAJ"
+        }
+      ]
     },
     {
       "author": "Gabriel Garcia Marquez",
@@ -87,8 +191,15 @@
       "slug": "one-hundred-years-of-solitude",
       "synopsis": "The patriarch of the family, José Arcadio Buendía, is impulsive and inquisitive. He remains a leader who is also deeply solitary, alienating himself from other men in his obsessive investigations into mysterious matters. These character traits are inherited by his descendents throughout the novel.\nThe patriarch of the family, José Arcadio Buendía, is impulsive and inquisitive. He remains a leader who is also deeply solitary, alienating himself from other men in his obsessive investigations into mysterious matters. These character traits are inherited by his descendents throughout the novel.",
       "title": "One Hundred Years of Solitude",
+      "publishedAt": "1967",
       "upvoted": true,
-      "upvotes": 723
+      "upvotes": 723,
+      "buyOn": [
+        {
+          "label": "Play Store",
+          "url": "https://play.google.com/store/books/details/Gabriel_Garc%C3%ADa_M%C3%A1rquez_One_Hundred_Years_of_Solitude?id=1Q0VAAAAYAAJ"
+        }
+      ]
     },
     {
       "author": "Dante Alighieri",
@@ -97,8 +208,23 @@
       "slug": "the-divine-comedy",
       "synopsis": "In the Divine comedy poem, he is the main character. The plot is set up in 1300, around the time Dante was in exile from his native Florence. But the actual writing was done by him between 1308 and 1321 at the time of his death. The Divine Comedy summary gives a picture of the realms of Dante's afterlife.\nIn the Divine comedy poem, he is the main character. The plot is set up in 1300, around the time Dante was in exile from his native Florence. But the actual writing was done by him between 1308 and 1321 at the time of his death. The Divine Comedy summary gives a picture of the realms of Dante's afterlife.",
       "title": "The Divine Comedy",
+      "publishedAt": "1321",
       "upvoted": false,
-      "upvotes": 749
+      "upvotes": 749,
+      "buyOn": [
+        {
+          "label": "Amazon",
+          "url": "https://www.amazon.com/Divine-Comedy-Dante-Alighieri/dp/0142437220"
+        },
+        {
+          "label": "iBooks",
+          "url": "https://books.apple.com/us/book/the-divine-comedy/id395513609"
+        },
+        {
+          "label": "Play Store",
+          "url": "https://play.google.com/store/books/details/Dante_Alighieri_The_Divine_Comedy?id=1Q0VAAAAYAAJ"
+        }
+      ]
     }
   ],
   "meta": {

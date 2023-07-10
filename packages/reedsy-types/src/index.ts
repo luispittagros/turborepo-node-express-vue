@@ -9,6 +9,11 @@ export interface Book {
   cover: string;
   upvoted?: boolean;
   upvotes?: number;
+  publishedAt: string;
+  buyOn: {
+    label: string;
+    url: string;
+  }[];
 }
 
 export type BookType = "word" | "pdf" | "wattpad" | "evernote" | "epub";
