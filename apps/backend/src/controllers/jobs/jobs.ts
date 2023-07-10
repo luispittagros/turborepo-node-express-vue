@@ -60,7 +60,7 @@ const createJob = (
 
 const jobExportSchema = Joi.object({
   bookId: Joi.string().required(),
-  type: Joi.string().required()
+  type: Joi.string().required().valid('epub', 'pdf')
 })
 
 export const createExportJob = (
@@ -71,8 +71,7 @@ export const createExportJob = (
   const { error } = jobExportSchema.validate(request.body)
 
   if (error) {
-    response.status(400).json({ error: error.details[0].message })
-    return
+    return response.status(400).json({ error: error.details[0].message })
   }
 
   const { bookId, type } = request.body
@@ -87,8 +86,8 @@ export const createExportJob = (
 
 const jobImportSchema = Joi.object({
   bookId: Joi.string().required(),
-  type: Joi.string().required(),
-  url: Joi.string().required()
+  type: Joi.string().required().valid('word', 'pdf', 'wattpad', 'evernote'),
+  url: Joi.string().required().uri()
 })
 
 export const createImportJob = (
@@ -99,7 +98,7 @@ export const createImportJob = (
   const { error } = jobImportSchema.validate(request.body)
 
   if (error) {
-    response.status(400).json({ error: error.details[0].message })
+    return response.status(400).json({ error: error.details[0].message })
   }
 
   const { bookId, type, url } = request.body
@@ -118,7 +117,15 @@ export const createImportJob = (
 }
 
 const getJobs = (request: Request, response: Response, jobs: Jobs) => {
-  response.status(200).json(jobs.entries())
+  const groupedJobs: { [key: string]: Job[] } = {}
+
+  jobs.forEach((job) => {
+    const group = groupedJobs[job.state] || []
+    group.push(job)
+    groupedJobs[job.state] = group
+  })
+
+  response.status(200).json(groupedJobs)
 }
 
 export const getExports = (request: Request, response: Response) =>

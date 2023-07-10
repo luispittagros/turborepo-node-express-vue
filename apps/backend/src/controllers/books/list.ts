@@ -41,7 +41,7 @@ export const list = async (
         message: 'No books found'
       })
     }
-    
+
     response.status(200).json(results)
   } catch (error) {
     next(error)
