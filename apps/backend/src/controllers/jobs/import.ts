@@ -1,12 +1,14 @@
 import { NextFunction, Response } from 'express'
-import { BookImportRequestBody, JobType } from 'reedsy-types'
+import { BookImportRequestBody, BookType, JobType } from 'reedsy-types'
 import Joi from 'joi'
 import { ReedsyRequest } from '@/types/request'
 import { createJob, processJob } from '@/services/jobs'
 
 const jobImportSchema = Joi.object({
   bookId: Joi.string().required(),
-  type: Joi.string().required().valid('word', 'pdf', 'wattpad', 'evernote'),
+  type: Joi.string()
+    .required()
+    .valid(BookType.WORD, BookType.PDF, BookType.WATTPAD, BookType.EVERNOTE),
   url: Joi.string().required().uri()
 })
 

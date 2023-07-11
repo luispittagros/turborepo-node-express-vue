@@ -1,12 +1,12 @@
 import { NextFunction, Response } from 'express'
-import { BookExportRequestBody, JobType } from 'reedsy-types'
+import { BookExportRequestBody, BookType, JobType } from 'reedsy-types'
 import Joi from 'joi'
 import { ReedsyRequest } from '@/types/request'
 import { createJob, processJob } from '@/services/jobs'
 
 const jobExportSchema = Joi.object({
   bookId: Joi.string().required(),
-  type: Joi.string().required().valid('epub', 'pdf')
+  type: Joi.string().required().valid(BookType.EPUB, BookType.PDF)
 })
 
 export const createExportJob = (

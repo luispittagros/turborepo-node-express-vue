@@ -27,7 +27,7 @@ export const processJob = (job: Job) => {
   const processingTime = processingTimes[job.type][job.book.type]
 
   if (!processingTime) {
-    throw new Error(`Unknown job type: ${job.type}`)
+    throw new Error(`Unable to process job ${job.id}`)
   }
 
   setTimeout(() => {
