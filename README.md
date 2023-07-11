@@ -48,45 +48,43 @@ user-friendly interface on top of the Git commands.
 
 ## Monorepo
 
-This is a monorepo and includes the following packages/apps:
+This is a monorepo and includes the following:
 
 ### Apps and Packages
 
-- `backend`: a node app that exposes a REST API
-- `frontend`: a Vue 3 books SPA that consumes the REST API exposed by the `backend`
-- `reedsy-types`: a package that contains shared types
-- `eslint-config-reedsy`: `eslint` configurations used throughout the monorepo
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-- `turborepo`: monorepo management
+- `backend`: a Node.js app that exposes a REST API.
+- `frontend`: a Vue.js 3 SPA for books that consumes the REST API exposed by the `backend`.
+- `reedsy-types`: a package that contains shared types.
+- `eslint-config-reedsy`: ESLint configurations package used throughout the monorepo.
 
-Each package/app is 100% Typescript
+Each package/app is 100% Typescript.
 
 ### Tools
 
 - `yarn`: package manager (version 1.22)
 - `turborepo`: monorepo management
 - `eslint`: linting
-- `prettier`: code formatting
-- `husky`: git hooks
-- `lint-staged`: run linters on staged files
+- `prettier`: code formatter
+- `husky`: git hooks management
+- `lint-staged`: run linters on staged files, prior to commits
 - `mocha`: testing
-- `supertest`: HTTP assertions
+- `supertest`: HTTP request testing
 - `chai`: assertion library
-- other packages used throughout the monorepo
+- other tools used throughout the monorepo
 
 ## Getting started
 
-### Install
+### Installation
 
-To install all dependencies, run the following command:
+To install all dependencies, execute the following command:
 
 ```
 yarn install
 ```
 
-### Develop
+### Development
 
-To develop all apps and packages, run the following command:
+To start active development on all apps and packages, run:
 
 ```
 yarn dev
@@ -94,57 +92,57 @@ yarn dev
 
 ### Build
 
-To build all apps and packages, run the following command:
+To build all apps and packages, use:
 
 ```
 yarn build
 ```
 
-### Serve
+### Serving Apps
 
-To serve all apps and packages, run the following command:
+To serve all applications and packages, run:
 
 ```
 yarn serve
 ```
 
-Note: this command will only work after running `yarn build`
+> **Note**: Ensure you've run `yarn build` before serving the applications
 
-### Lint
+### Linting
 
-To lint all apps and packages, run the following command:
+To run lint checks across all apps and packages, use:
 
 ```
 yarn lint
 ```
 
-### Test
+### Testing
 
-To test all apps and packages, run the following command:
+To execute tests across all apps and packages, run:
 
 ```
 yarn test
 ```
 
-e2e tests:
+For end-to-end (e2e) tests, use:
 
 ```
 yarn test:e2e
 ```
 
-Note: `npx playwright install` is required to run e2e tests
+> **Note**: Remember to run `npx playwright install` before executing e2e tests.
 
-### Type-check
+### Type-checking
 
-To type-check all apps and packages, run the following command:
+To perform type-checking across all apps and packages, run:
 
 ```
 yarn type-check
 ```
 
-### Format
+### Formatting
 
-To format all apps and packages, run the following command:
+To format all apps and packages using Prettier, use:
 
 ```
 yarn format
@@ -152,24 +150,18 @@ yarn format
 
 ### API Endpoints
 
-#### Import and Export endpoints:
+| Endpoint               | Method | Description                          |
+|------------------------|--------|--------------------------------------|
+| /import                | POST   | Import functionality endpoint        |
+| /import                | GET    | Retrieve import information endpoint |
+| /export                | POST   | Export functionality endpoint        |
+| /export                | GET    | Retrieve export information endpoint |
+| /books                 | GET    | Retrieve all books endpoint          |
+| /books?page=1&limit=10 | GET    | Retrieve paginated books endpoint    |
 
-`POST`/import
+### Optional Query Parameters for /books endpoint:
 
-`GET` /import
-
-`POST` /export
-
-`GET` /export
-
-#### Books endpoints:
-
-`GET` /books
-
-`GET` /books?page=1&limit=10
-
-Parameters (optional):
-
-- `page`: page number
-- `limit`: number of books per page
-
+| Parameter | Description               |
+|-----------|---------------------------|
+| page      | Specifies the page number |
+| limit     | Number of books per page  |
