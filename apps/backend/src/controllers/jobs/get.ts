@@ -2,8 +2,8 @@ import { Request, Response } from 'express'
 import { JobType } from 'reedsy-types'
 import { getGroupedJobs } from '@/services/jobs'
 
-export const getExports = (request: Request, response: Response) => {
-  const groupedJobs = getGroupedJobs(JobType.EXPORT)
+const getJobs = (request: Request, response: Response, type: JobType) => {
+  const groupedJobs = getGroupedJobs(type)
 
   if (!groupedJobs) {
     return response.status(404).json({ error: 'No jobs found' })
@@ -12,12 +12,8 @@ export const getExports = (request: Request, response: Response) => {
   response.status(200).json(groupedJobs)
 }
 
-export const getImports = (request: Request, response: Response) => {
-  const groupedJobs = getGroupedJobs(JobType.IMPORT)
+export const getExports = (request: Request, response: Response) =>
+  getJobs(request, response, JobType.EXPORT)
 
-  if (!groupedJobs) {
-    return response.status(404).json({ error: 'No jobs found' })
-  }
-
-  response.status(200).json(groupedJobs)
-}
+export const getImports = (request: Request, response: Response) =>
+  getJobs(request, response, JobType.IMPORT)
