@@ -22,6 +22,8 @@ const processingTimes: Record<JobType, Record<BookType, number>> = {
 const getJobKey = (job: Job) => `${job.book.id}-${job.book.type}-${job.type}`
 
 export const processJob = (job: Job) => {
+  if (job.state === JobState.FINISHED) return
+
   const processingTime = processingTimes[job.type][job.book.type]
 
   if (!processingTime) {
@@ -64,7 +66,7 @@ export const getGroupedJobs = (type: JobType) => {
 
   jobs.forEach((job) => {
     if (job.type !== type) return
-    
+
     const group = groupedJobs[job.state] || []
     group.push(job)
 
