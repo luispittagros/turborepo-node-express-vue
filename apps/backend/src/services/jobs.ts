@@ -38,7 +38,7 @@ export const processJob = (job: Job) => {
   }, processingTime * 1000)
 }
 
-export const createJob = (type: JobType, book: JobBook): Job | undefined => {
+export const createJob = (type: JobType, book: JobBook): Job => {
   const job: Job = {
     id: uuid(),
     book,
@@ -49,8 +49,9 @@ export const createJob = (type: JobType, book: JobBook): Job | undefined => {
   }
 
   const jobKey = getJobKey(job)
+  const existingJob = jobs.get(jobKey)
 
-  if (jobs.has(jobKey)) return jobs.get(jobKey)
+  if (existingJob) return existingJob
 
   jobs.set(jobKey, job)
 
