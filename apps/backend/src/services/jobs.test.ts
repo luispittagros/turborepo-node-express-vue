@@ -70,4 +70,35 @@ describe('Jobs Service', () => {
 
     expect(job1).to.eql(job2)
   })
+
+  it('should ignore finished jobs when processing', () => {
+    const book = { id: uuid(), type: BookType.EPUB }
+
+    const job = createJob(JobType.EXPORT, book)
+    job.state = JobState.FINISHED
+
+    processJob(job)
+
+    // Tick the clock forward by 10 seconds (the processing time for an EPUB export job)
+    clock.tick(10000)
+
+    // The job's updatedAt property should not be updated because the job was already finished
+    expect(job.updatedAt.getTime()).to.be.equal(Date.now() - 10000)
+  })
+
+  it('should return all jobs of a specific type', () => {
+    const book1 = { id: uuid(), type: BookType.EPUB }
+    const book2 = { id: uuid(), type: BookType.EVERNOTE }
+
+    const job1 = createJob(JobType.EXPORT, book1)
+    const job2 = createJob(JobType.IMPORT, book2)
+
+    const groupedJobsExport = getGroupedJobs(JobType.EXPORT)
+    const groupedJobsImport = getGroupedJobs(JobType.IMPORT)
+
+    expect(groupedJobsExport[JobState.PENDING]).to.include(job1)
+    expect(groupedJobsExport[JobState.PENDING]).not.to.include(job2)
+    expect(groupedJobsImport[JobState.PENDING]).to.include(job2)
+    expect(groupedJobsImport[JobState.PENDING]).not.to.include(job1)
+  })
 })
