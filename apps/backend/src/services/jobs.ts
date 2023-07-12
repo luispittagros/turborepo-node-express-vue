@@ -2,20 +2,20 @@ import { BookType, Job, JobBook, JobState, JobType } from 'reedsy-types'
 import jobs from '@/models/jobs'
 import { v4 as uuid } from 'uuid'
 
-const processingTimes: Record<JobType, Record<BookType, number>> = {
+const processingTimes: Record<JobType, Record<BookType, number | undefined>> = {
   [JobType.EXPORT]: {
     [BookType.EPUB]: 10,
     [BookType.PDF]: 25,
-    [BookType.WORD]: 0,
-    [BookType.WATTPAD]: 0,
-    [BookType.EVERNOTE]: 0
+    [BookType.WORD]: undefined,
+    [BookType.WATTPAD]: undefined,
+    [BookType.EVERNOTE]: undefined
   },
   [JobType.IMPORT]: {
     [BookType.WORD]: 60,
     [BookType.PDF]: 60,
     [BookType.WATTPAD]: 60,
-    [BookType.EPUB]: 0,
-    [BookType.EVERNOTE]: 0
+    [BookType.EPUB]: undefined,
+    [BookType.EVERNOTE]: 60
   }
 }
 
@@ -26,7 +26,7 @@ export const processJob = (job: Job) => {
 
   const processingTime = processingTimes[job.type][job.book.type]
 
-  if (!processingTime) {
+  if (processingTime === undefined) {
     throw new Error(`Unable to process job ${job.id}`)
   }
 
