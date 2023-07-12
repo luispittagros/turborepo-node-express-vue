@@ -1,9 +1,9 @@
 import { Request, Response } from 'express'
 import { JobType } from 'reedsy-types'
-import { getGroupedJobs } from '@/services/jobs'
+import { getStateGroupedJobs } from '@/services/jobs'
 
 const getJobs = (request: Request, response: Response, type: JobType) => {
-  const groupedJobs = getGroupedJobs(type)
+  const groupedJobs = getStateGroupedJobs(type)
 
   if (!groupedJobs) {
     return response.status(404).json({ error: 'No jobs found' })

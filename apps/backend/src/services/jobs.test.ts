@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import sinon, { SinonFakeTimers } from 'sinon'
 import { v4 as uuid } from 'uuid'
-import { createJob, processJob, getGroupedJobs } from '@/services/jobs'
+import { createJob, processJob, getStateGroupedJobs } from '@/services/jobs'
 import { JobType, BookType, JobState } from 'reedsy-types'
 
 describe('Jobs Service', () => {
@@ -57,7 +57,7 @@ describe('Jobs Service', () => {
     // Tick the clock forward by 10 seconds (the processing time for an EPUB export job)
     clock.tick(10000)
 
-    const groupedJobs = getGroupedJobs(JobType.EXPORT)
+    const groupedJobs = getStateGroupedJobs(JobType.EXPORT)
 
     expect(groupedJobs).to.have.property(JobState.PENDING).that.includes(job2)
     expect(groupedJobs).to.have.property(JobState.FINISHED).that.includes(job1)
@@ -93,8 +93,8 @@ describe('Jobs Service', () => {
     const job1 = createJob(JobType.EXPORT, book1)
     const job2 = createJob(JobType.IMPORT, book2)
 
-    const groupedJobsExport = getGroupedJobs(JobType.EXPORT)
-    const groupedJobsImport = getGroupedJobs(JobType.IMPORT)
+    const groupedJobsExport = getStateGroupedJobs(JobType.EXPORT)
+    const groupedJobsImport = getStateGroupedJobs(JobType.IMPORT)
 
     expect(groupedJobsExport[JobState.PENDING]).to.include(job1)
     expect(groupedJobsExport[JobState.PENDING]).not.to.include(job2)

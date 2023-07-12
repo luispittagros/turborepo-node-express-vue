@@ -58,7 +58,7 @@ export const createJob = (type: JobType, book: JobBook): Job => {
   return job
 }
 
-export const getGroupedJobs = (type: JobType) => {
+export const getStateGroupedJobs = (type: JobType) => {
   const groupedJobs: Record<JobState, Job[]> = {
     [JobState.PENDING]: [],
     [JobState.FINISHED]: [],
