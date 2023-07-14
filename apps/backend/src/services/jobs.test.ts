@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import sinon, { SinonFakeTimers } from 'sinon'
 import { v4 as uuid } from 'uuid'
 import { createJob, processJob, getStateGroupedJobs } from '@/services/jobs'
-import { JobType, BookType, JobState } from 'reedsy-types'
+import { JobType, BookType, JobState } from 'shared-types'
 
 describe('Jobs Service', () => {
   let clock: SinonFakeTimers

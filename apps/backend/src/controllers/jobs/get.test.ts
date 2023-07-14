@@ -2,7 +2,7 @@ import request from 'supertest'
 import { expect } from 'chai'
 import express, { Express } from 'express'
 import { getExports, getImports } from '@/controllers/jobs'
-import { JobState } from 'reedsy-types'
+import { JobState } from 'shared-types'
 
 let app: Express
 

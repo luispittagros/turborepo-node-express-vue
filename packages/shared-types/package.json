@@ -1,5 +1,5 @@
 {
-  "name": "reedsy-types",
+  "name": "shared-types",
   "version": "0.0.0",
   "main": "src/index.ts",
   "types": "./src/index.ts",
@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "typescript": "^5.1.6",
-    "eslint-config-reedsy": "*"
+    "eslint-config-shared": "*"
   }
 }

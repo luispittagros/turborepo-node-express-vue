@@ -12,7 +12,7 @@ export interface RequestBody {}
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface RequestQuery {}
 
-export type ReedsyRequest<Body = RequestBody, Query = RequestQuery> = Request<
+export type AppRequest<Body = RequestBody, Query = RequestQuery> = Request<
   RequestParams,
   ResponseBody,
   Body,

@@ -1,4 +1,4 @@
-import { Job } from 'reedsy-types'
+import { Job } from 'shared-types'
 
 const Jobs = new Map<string, Job>()
 

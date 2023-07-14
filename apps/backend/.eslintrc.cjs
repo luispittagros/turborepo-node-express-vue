@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   plugins: ['@typescript-eslint'],
   extends: [
-    'reedsy',
+    'shared',
     'plugin:@typescript-eslint/recommended'
   ],
   parser: '@typescript-eslint/parser',

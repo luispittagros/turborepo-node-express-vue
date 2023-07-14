@@ -1,6 +1,6 @@
 import { Response, NextFunction } from 'express'
-import { Book, BooksResponse } from 'reedsy-types'
-import { ReedsyRequest, RequestBody } from '@/types/request'
+import { Book, BooksResponse } from 'shared-types'
+import { AppRequest, RequestBody } from '@/types/request'
 import { readFileSync } from 'fs'
 import { resolve } from 'path'
 
@@ -10,7 +10,7 @@ interface Pagination {
 }
 
 export const list = async (
-  request: ReedsyRequest<RequestBody, Pagination>,
+  request: AppRequest<RequestBody, Pagination>,
   response: Response,
   next: NextFunction
 ) => {
@@ -48,7 +48,7 @@ export const list = async (
         count: totalBooks
       }
     }
-    
+
     response.status(200).json(booksResponse)
   } catch (error) {
     next(error)

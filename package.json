@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "reedsy-challenge",
+  "name": "turborepo-node-express-vue3",
   "scripts": {
     "build": "turbo run build",
     "serve": "turbo run serve",
@@ -15,11 +15,11 @@
   "devDependencies": {
     "@turbo/gen": "^1.9.7",
     "@types/node": "^20.4.1",
-    "eslint-config-reedsy": "*",
+    "eslint-config-shared": "*",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "^3.0.0",
-    "reedsy-types": "*",
+    "shared-types": "*",
     "turbo": "latest",
     "typescript": "^5.1.6"
   },

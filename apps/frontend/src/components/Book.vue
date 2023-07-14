@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Book } from 'reedsy-types'
+import type { Book } from 'shared-types'
 import { computed } from 'vue'
 
 interface BookProps {

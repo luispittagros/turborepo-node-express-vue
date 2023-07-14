@@ -1,4 +1,4 @@
-import { BookType, Job, JobBook, JobState, JobType } from 'reedsy-types'
+import { BookType, Job, JobBook, JobState, JobType } from 'shared-types'
 import jobs from '@/models/jobs'
 import { v4 as uuid } from 'uuid'
 

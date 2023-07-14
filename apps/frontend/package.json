@@ -38,7 +38,7 @@
     "@vue/tsconfig": "^0.4.0",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.44.0",
-    "eslint-config-reedsy": "*",
+    "eslint-config-shared": "*",
     "eslint-plugin-vue": "^9.11.0",
     "jest": "^29.6.1",
     "jsdom": "^22.1.0",

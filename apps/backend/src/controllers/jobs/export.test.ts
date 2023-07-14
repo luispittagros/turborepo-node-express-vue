@@ -2,7 +2,7 @@ import request from 'supertest'
 import { expect } from 'chai'
 import express, { Express } from 'express'
 import { createExportJob } from '@/controllers/jobs'
-import { JobState, JobType } from 'reedsy-types'
+import { JobState, JobType } from 'shared-types'
 import { v4 as uuid } from 'uuid'
 
 let app: Express

@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 import axios from 'axios'
-import type { Book, BooksResponse } from 'reedsy-types'
+import type { Book, BooksResponse } from 'shared-types'
 
 export default function useBooksAPI() {
   const books = ref<Book[]>([])

@@ -1,7 +1,7 @@
 import { NextFunction, Response } from 'express'
-import { BookImportRequestBody, BookType, JobType } from 'reedsy-types'
+import { BookImportRequestBody, BookType, JobType } from 'shared-types'
 import Joi from 'joi'
-import { ReedsyRequest } from '@/types/request'
+import { AppRequest } from '@/types/request'
 import { createJob, processJob } from '@/services/jobs'
 
 const jobImportSchema = Joi.object({
@@ -13,7 +13,7 @@ const jobImportSchema = Joi.object({
 })
 
 export const createImportJob = (
-  request: ReedsyRequest<BookImportRequestBody>,
+  request: AppRequest<BookImportRequestBody>,
   response: Response,
   next: NextFunction
 ) => {

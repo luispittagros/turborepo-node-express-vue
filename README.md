@@ -6,8 +6,8 @@ This is a monorepo and includes the following:
 
 - `backend`: a Node.js app that exposes a REST API.
 - `frontend`: a Vue.js 3 SPA for books that consumes the REST API exposed by the `backend`.
-- `reedsy-types`: a package that contains shared types.
-- `eslint-config-reedsy`: ESLint configurations package used throughout the monorepo.
+- `shared-types`: a package that contains shared types.
+- `eslint-config-shared`: ESLint configurations package used throughout the monorepo.
 
 Each package/app is 100% Typescript.
 

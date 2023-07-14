@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { JobType } from 'reedsy-types'
+import { JobType } from 'shared-types'
 import { getStateGroupedJobs } from '@/services/jobs'
 
 const getJobs = (request: Request, response: Response, type: JobType) => {
